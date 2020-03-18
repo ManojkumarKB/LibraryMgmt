@@ -16,8 +16,8 @@ public class Publisher {
 	@Column(name="publisher_id")
 	private int publisher_id;
 
-	@Column(name="name")
-	private String name;
+	@Column(name="Publisher_name")
+	private String publisher_name;
 	
 	@Column(name="location")
 	private String location;
@@ -30,12 +30,12 @@ public class Publisher {
 		this.publisher_id = publisher_id;
 	}
 
-	public String getName() {
-		return name;
+	public String getPublisher_name() {
+		return publisher_name;
 	}
 
-	public void setName(String name) {
-		this.name = name;
+	public void setPublisher_name(String publisher_name) {
+		this.publisher_name = publisher_name;
 	}
 
 	public String getLocation() {

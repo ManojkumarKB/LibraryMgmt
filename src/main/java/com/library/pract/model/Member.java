@@ -23,8 +23,8 @@ public class Member {
     @Column(name = "Member_id")
     private long id;
  
-    @Column(name = "Name")
-    private String Name;
+    @Column(name = "Member_Name")
+    private String Member_Name;
     
     @JoinColumn(name = "Dept_id")
     @OneToOne(cascade = CascadeType.ALL)
@@ -52,12 +52,12 @@ public class Member {
     }
     
 
-	public String getName() {
-		return Name;
+	public String getMember_Name() {
+		return Member_Name;
 	}
 
-	public void setName(String name) {
-		this.Name = name;
+	public void setMember_Name(String member_Name) {
+		Member_Name = member_Name;
 	}
 
 	public Dept getDept() {

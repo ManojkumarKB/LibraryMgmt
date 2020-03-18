@@ -16,15 +16,16 @@ public class Author {
 	@Column(name="author_id")
 	private int author_id;
 	
-	@Column(name="name")
-	private String name;
+	@Column(name="author_name")
+	private String author_name;
 
-	public String getName() {
-		return name;
+	
+	public String getAuthor_name() {
+		return author_name;
 	}
 
-	public void setName(String name) {
-		this.name = name;
+	public void setAuthor_name(String author_name) {
+		this.author_name = author_name;
 	}
 
 	public int getAuthor_id() {

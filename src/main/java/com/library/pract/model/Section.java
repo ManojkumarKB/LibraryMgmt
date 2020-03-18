@@ -19,8 +19,8 @@ public class Section {
 	@Column(name="Section_id")
 	private int Section_id;
 	
-	@Column(name="name")
-	private String name;
+	@Column(name="Section_name")
+	private String section_name;
 	
 	@ManyToOne(cascade = CascadeType.ALL)
 	@JoinColumn(name = "Category_id")
@@ -35,15 +35,13 @@ public class Section {
 	{
 		Section_id = section_id;
 	}
-
-	public String getName()
-	{
-		return name;
+	
+	public String getSection_name() {
+		return section_name;
 	}
 
-	public void setName(String name) 
-	{
-		this.name = name;
+	public void setSection_name(String section_name) {
+		this.section_name = section_name;
 	}
 
 	public Category getCategory() 

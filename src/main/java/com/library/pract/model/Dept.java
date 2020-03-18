@@ -15,16 +15,24 @@ public class Dept {
     @Column(name = "Dept_id")
     private long id;
  
-    @Column(name = "name")
-    private String name;
+    @Column(name = "Dept_name")
+    private String Dept_Name;
  
-    public Dept() { }
- 
-    public Dept(String name) {
-        this.name = name;
-    }
- 
-    public long getId() {
+    public Dept(long id, String dept_Name) {
+		super();
+		this.id = id;
+		Dept_Name = dept_Name;
+	}
+
+	public String getDept_Name() {
+		return Dept_Name;
+	}
+
+	public void setDept_Name(String dept_Name) {
+		Dept_Name = dept_Name;
+	}
+
+	public long getId() {
         return id;
     }
  
@@ -32,12 +40,6 @@ public class Dept {
         this.id = id;
     }
  
-    public String getName() {
-        return name;
-    }
- 
-    public void setName(String name) {
-        this.name = name;
-    }
+   
  
 }

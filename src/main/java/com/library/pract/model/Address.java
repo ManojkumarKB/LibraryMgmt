@@ -32,8 +32,6 @@ public class Address {
  
     public Address() { }
  
-   
- 
     public Address(String door_no, String street, String place, String district, String pincode) {
 		Door_no = door_no;
 		Street = street;
