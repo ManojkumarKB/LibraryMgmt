@@ -12,26 +12,40 @@
 		{
 			console.log("hello");
 			load_json_data('category');
+			$.ajax({
+				url:'/Allbooks',
+				method:'GET',
+				dataType:"json",
+				contentType:"application/json",
+				encode:true,
+				success: function(data){
+					console.log(data);
+				}
+			});
+
 			
 			function load_json_data(id, parent_id)
 	 		{
 				var html_code = '';
-				$.getJSON("Category", function(data){
-					
+				$.getJSON("Category_Section.json", function(data){
 					html_code += '<option value="">Select '+id+'</option>';
+					
 					$.each(data, function(key, value){
 						if(id == 'category')
 						{
-							if(value.parent_id=='0')
+							if(value.t=='5')
 							{
-								html_code += '<option value="'+value.name+'">'+value.name+'</option>';	
+								console.log("category_id"+value.id);
+								html_code += '<option value="'+value.parent_id+'" >'+value.name+'</option>';	
 							}
 						}
 						else
 						{
+							console.log(parent_id);
 							if(value.parent_id == parent_id)
 						     {
-						      html_code += '<option value="'+value.id+'">'+value.name+'</option>';
+								console.log("section_id"+value.id);
+						      html_code += '<option value="'+value.name+'" >'+value.name+'</option>';
 						     }
 						}
 					});
@@ -56,7 +70,7 @@
 				        };*/
 				        
 				 event.preventDefault();
-				 var jsonStr="{\"author\":{\"author_name\":\""+$('#author_name').val()+"\"},\"publisher\":{\"publisher_name\":\""+$('#publisher_name').val()+"\",\"location\":\""+$('#publisher_location').val()+"\"},\"isbn\":\""+$('#isbn').val()+"\",\"title\":\""+$('#title').val()+"\",\"section\":{\"section_name\":\""+$('#section_name').val()+"\",\"category\":{\"category_name\":\""+$('#category').val()+"\"}},\"amount\":\""+$('#amount').val()+"\",\"edition\":\""+$('#edition').val()+"\"}";
+				 var jsonStr="{\"author\":{\"author_name\":\""+$('#author_name').val()+"\"},\"publisher\":{\"publisher_name\":\""+$('#publisher_name').val()+"\",\"location\":\""+$('#publisher_location').val()+"\"},\"isbn\":\""+$('#isbn').val()+"\",\"title\":\""+$('#title').val()+"\",\"section\":{\"section_name\":\""+$('#Section').val()+"\",\"category\":{\"category_name\":\""+$("#category").val()+"\"}},\"amount\":\""+$('#amount').val()+"\",\"edition\":\""+$('#edition').val()+"\"}";
 				 
 				 console.log($('#category').val()+"  "+$('#Section').val());
 				// var obj=JSON.parse(jsonStr);
@@ -112,7 +126,7 @@
    				<tr>
    					<td>Section</td>
    					<td>
-  						 	<select name="section_name" id="Section">
+  						 	<select name="section_name" id="Section" >
     							<option value="">Select Section</option>
   						 	</select>
   					</td>

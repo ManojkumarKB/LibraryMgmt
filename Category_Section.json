@@ -2,61 +2,62 @@
  {
   "id":"1",
   "name":"CSE",
-  "parent_id":"0"
+  "parent_id":"CSE"
  }, 
  {
   "id":"2",
   "name":"EEE",
-  "parent_id":"0"
+  "parent_id":"EEE"
+  
  }, 
  {
   "id":"3",
   "name":"ECE",
-  "parent_id":"0"
+  "parent_id":"ECE"
  }, 
 {
   "id":"4",
   "name":"Data Structures",
-  "parent_id":"1"
+  "parent_id":"CSE"
  }, 
  {
   "id":"5",
   "name":"Computer Networks",
-  "parent_id":"1"
+  "parent_id":"CSE"
  }, 
  {
   "id":"6",
   "name":"DBMS",
-  "parent_id":"1"
+  "parent_id":"CSE"
  }, 
  {
   "id":"7",
   "name":"Operating System",
-  "parent_id":"1"
+  "parent_id":"CSE"
  },
  {
   "id":"8",
   "name":"Electrical Circuit",
-  "parent_id":"2"
+  "parent_id":"EEE"
  },
 {
 "id":"9",
 "name":"Wireless Technology",
-"parent_id":"2"
+"parent_id":"EEE"
 },
 {
 "id":"10",
 "name":"Circuit Debugging",
-"parent_id":"3"
+"parent_id":"ECE"
 },
 {
 "id":"11",
 "name":"Logical Circuits",
-"parent_id":"3"
+"parent_id":"ECE"
 },
 {
 "id":"12",
 "name":"Programming",
-"parent_id":"1"
+"parent_id":"CSE"
 }
 ]

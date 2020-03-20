@@ -16,7 +16,7 @@ public class Author {
 	@Column(name="author_id")
 	private int author_id;
 	
-	@Column(name="author_name")
+	@Column(name="author_name",unique=true)
 	private String author_name;
 
 	
